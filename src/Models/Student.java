@@ -4,8 +4,7 @@ import java.nio.file.Path;
 
 public class Student extends Person{
     private double gpa;
-    private static final double Stepa = 36600;
-
+    private double stepa = 36600;
     public Student(){
         super();
     }
@@ -24,7 +23,11 @@ public class Student extends Person{
     }
     @Override
     public double getPaymentAmount() {
-        return (gpa > 2.67) ? Stepa : 0;
+        if (getGpa() > 2.67){
+            return stepa;
+        }
+        else
+            return 0;
     }
 
     @Override

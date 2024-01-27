@@ -11,7 +11,8 @@ public class Employee extends Person {
     }
 
     public Employee(String name, String surname, String position, Double salary){
-        super(name, surname);
+        this();
+        setName(name);
         setPosition(position);
         setSalary(salary);
     }

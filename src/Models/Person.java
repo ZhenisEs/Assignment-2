@@ -1,6 +1,6 @@
 package Models;
 
-public class Person implements Payable, Comparable<Person>{
+public abstract class Person implements Payable, Comparable<Person>{
 
     private static int id_gen=1;
     private int id;
@@ -45,9 +45,5 @@ public class Person implements Payable, Comparable<Person>{
     public int compareTo(Person second){
         return Double.compare(this.getPaymentAmount(), second.getPaymentAmount());
     }
-
-    public double getPaymentAmount() {
-        return 0;
-    }
-
+    public abstract double getPaymentAmount();
 }
