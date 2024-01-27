@@ -2,15 +2,15 @@ package Models;
 
 public class Employee extends Person {
 
-    private String position;
-    private double salary;
+    private String position; //job position
+    private double salary; //salary
 
 
-    public Employee(){
+    public Employee(){ //constructor for the call parent class
         super();
     }
 
-    public Employee(String name, String surname, String position, Double salary){
+    public Employee(String name, String surname, String position, Double salary){ //sets the objects
         this();
         setName(name);
         setPosition(position);
@@ -37,13 +37,13 @@ public class Employee extends Person {
     @Override
     public String toString(){
         return "Employee: "+super.toString() +" earns "+ getSalary()+" tenge";
-    }
+    }//return by call parent class and use him toString (answer)
 
 
     @Override
     public double getPaymentAmount(){
         return salary;
-    }
+    } //return salary
 
 
     
